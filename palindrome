@@ -1,0 +1,14 @@
+//if a string is palindrome
+function palindrome(str){
+	let revStr = str.split('').reverse().join('');
+	return (revStr == str)
+}
+
+function palindrome(str){
+	let mid = Math.floor(str.length/2);
+	let isPalind = true;
+	for(let i=0;i<mid;i++) {
+		if(str[i] != str[str.length-i-1]) return false
+	}
+	return true
+}
